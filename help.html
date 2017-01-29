@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+
+<html>
+
+<head>
+	<!-- How do you know what content to put in your headers? And in what format? -->
+	<title>Get Help</title>
+	<link rel="stylesheet" href="css/overall.css">
+	<link rel="stylesheet" href="css/help.css">
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script> <!-- This imports JQuery -->
+	<script src="js/help.js"></script>
+</head>
+
+<body>
+
+<div id="nav">
+	<ul>	
+		<li><a href= "weather.html">Weather</a></li>
+		<li><a href= "help.html">Help</a></li>
+	</ul>
+</div>
+
+<div id="main">
+	<div id="title">
+		<h1>Get Help from Stack Overflow</h1>
+	</div>
+
+	<br>
+		
+	<form id="search">
+		Search Term: <input id="helpfield" type="text">
+		<input type="submit" value="Search Stack Overflow">
+		<br>
+	</form>
+
+	<div id="results"></div>
+
+</div>
+
+<!-- http://stackoverflow.com/questions/1263852/prevent-form-redirect-or-refresh-on-submit -->
+<!-- Submit function for search box -->
+<script type="text/javascript">
+	$( "#search" ).submit(function () {
+		OnClickSubmit();
+	 	return false;
+	});
+</script>
+
+</body>
+
+</html>

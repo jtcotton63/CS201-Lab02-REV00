@@ -1,0 +1,10 @@
+
+/* http://stackoverflow.com/questions/10989238/center-align-image-within-div-horizontally */
+#main img {
+	display: block;
+	margin: auto;
+}
+
+#results a {
+	line-height: 20px;
+}

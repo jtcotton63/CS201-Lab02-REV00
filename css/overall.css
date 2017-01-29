@@ -1,0 +1,117 @@
+
+/* http://www.w3schools.com/css/css3_fonts.asp */
+@font-face {
+    font-family: Raleway-Light;
+    src: url(../fonts/Raleway-Light.ttf);
+}
+
+html {
+	
+	/* http://css-tricks.com/perfect-full-page-background-image/ */
+	background-image: url(../images/Rachel-Eagles.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed; /* See http://www.w3schools.com/cssref/css3_pr_background.asp for property specs */
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+
+body {
+
+	width: auto;
+	/* http://webdesignerwall.com/tutorials/5-useful-css-tricks-for-responsive-design */
+
+	margin-top: 90px;
+	min-height: 250px;
+	margin-left: auto;	 /*http://www.w3schools.com/css/css_align.asp */
+	margin-right: auto;
+
+	font-family: "Trebuchet MS", Helvetica, sans-serif; /* http://www.w3schools.com/cssref/css_websafe_fonts.asp */
+	color: rgb(58, 62, 63);
+}
+
+#nav li {
+	display: inline;
+	padding: 20px;
+}
+
+#nav {
+	background-color: rgba(0, 0, 0, .5); 
+
+	position: absolute;
+	top: 0;
+	height: 12%;
+	min-height: 12%;
+	width: 100%;
+	
+	font-family: Raleway-Light;
+	text-align: center;
+}
+
+#nav p {
+	display: inline-block;
+
+	margin: 1%;
+	
+	background-color: transparent;
+} 
+
+/* http://stackoverflow.com/questions/19363343/override-link-style-inside-an-html-div */
+#nav a:link, a:visited {
+	color: rgb(149, 150, 151);
+	text-decoration: none;
+}
+
+#nav a:hover {
+	background-color: rgb(149, 150, 151);
+	color: rgb(66, 66, 66);
+}
+
+#nav a:active {
+	color: orange;
+}
+
+#main, #title {
+
+	/*float: center;	/* http://stackoverflow.com/questions/13189610/how-to-make-a-page-with-header-and-left-sidebar Answer #1 */
+	margin-left: auto;
+	margin-right: auto;
+	width: 67%;
+
+}
+
+#title {
+	/*For testing*/
+	background-color: transparent;
+
+	text-align: center;
+
+	border-bottom: solid;
+	border-width: 1px; /* http://www.w3schools.com/css/css_border.asp */
+	width: 100%;
+
+}
+
+#main {
+	/*For testing*/
+	background-color: rgba(168, 163 ,163, .5);
+
+	text-align: left;
+
+	padding-top: 10px;
+	padding-left: 100px;
+	padding-bottom: 100px;
+	padding-right: 100px;
+}
+
+h1 {
+
+}
+
+h2 {
+	text-align: right;
+	text-transform: capitalize;
+}
