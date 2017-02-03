@@ -58,7 +58,7 @@ function WeatherOnClickSubmit() {
 
 			// Populate the text box
 			// http://stackoverflow.com/questions/415602/set-value-of-textarea-in-jquery
-			$("#txtarea").val(cityName);
+			$("#displayCity").val(cityName);
 
 			var weatherDivString = "<br>";
 			weatherDivString += "Current weather prediction for " + cityName + ":";
