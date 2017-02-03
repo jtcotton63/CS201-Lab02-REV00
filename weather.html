@@ -28,11 +28,11 @@
 	<br>
 		
 	<form id="search">
-		Enter a City: <input id="cityField" type="text" value="" onkeyup="OnCityInput()">
-		<input type="submit" value="Find weather info">
+		Enter a City: <input id="cityField" type="text" value="" onkeyup="WeatherOnCityInput()">
+		<input id="weatherButton" type="submit" value="Find weather info">
 		<br>
 		<br>
-		Possible Matches: <span ><ul id="txtHint"></ul></span>
+		Possible Matches: <span><ul id="txtHint"></ul></span>
 	</form>
 
 	<div id="city">
@@ -46,8 +46,8 @@
 <!-- http://stackoverflow.com/questions/1263852/prevent-form-redirect-or-refresh-on-submit -->
 <!-- Submit function for search box -->
 <script type="text/javascript">
-	$( "#search" ).submit(function () {
-		OnClickSubmit();
+	$("#search").submit(function () {
+		WeatherOnClickSubmit();
 	 	return false;
 	});
 </script>
