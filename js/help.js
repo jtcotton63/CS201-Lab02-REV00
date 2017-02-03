@@ -1,5 +1,5 @@
 function OnClickSubmit() {
-	var searchTerm = $( "#helpfield" ).val();
+	var searchTerm = $("#searchStack").val();
 
 	// Get detailed weather information for city
 	var myURL = "https://api.stackexchange.com/2.2/search?order=desc&sort=activity&intitle=" + searchTerm + "&site=stackoverflow";
@@ -15,7 +15,7 @@ function OnClickSubmit() {
 				resultsDivString += generateResult(item);
 			});
 
-			$("#results").html(resultsDivString);
+			$("#searchResults").html(resultsDivString);
 		}
 	});
 };
