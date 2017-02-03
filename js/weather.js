@@ -1,7 +1,7 @@
 function OnCityInput() {
 
 	// http://stackoverflow.com/questions/15764844/jquery-getjson-save-result-into-variable
-	var searchTerm = $( "#cityfield" ).val();
+	var searchTerm = $( "#cityField" ).val();
 	var autoURL = "http://bioresearch.byu.edu/cs260/jquery/getcity.cgi?q=";
 	autoURL += searchTerm;
 
@@ -9,37 +9,32 @@ function OnCityInput() {
 		return;
 
 	$.getJSON( autoURL, function( data ) {
-		var resultsAsString = "<ul>";
+		var resultsAsString = "";
 		$.each( data, function( i , item ) {
 
 			// http://stackoverflow.com/questions/441018/replacing-spaces-with-underscores-in-javascript
 			var temp = data[ i ].city;
-			if( typeof temp === 'undefined' ) {
-				$( "#matches" ).html( "<ul></ul>" );
+			if(typeof temp === 'undefined') {
 				return;
 			}
 
 			temp = temp.replace( / /g,"_" );
 
 			resultsAsString += "<li "
-			// + "onmouseover=OnMouseOverEntry(\"" + data[ i ].city + "\") "
 			+ "onclick=OnClickEntry(\"" + temp + "\") "
 			+ "style=\"cursor: pointer\""
 			+ ">" 
 			+ data[ i ].city;
 			+ "</li>";
 		});
-		resultsAsString += "</ul>";
 
-		$( "#matches" ).html( resultsAsString );
+		$( "#txtHint" ).html(resultsAsString);
 
 	});
 
 };
 
-// function OnMouseOverEntry( listValue ) {
-// 		console.log( listValue );
-// };
+
 
 function OnClickEntry( listValue ) {
 
