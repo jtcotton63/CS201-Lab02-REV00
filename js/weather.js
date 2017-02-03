@@ -70,7 +70,7 @@ function WeatherOnClickSubmit() {
 			weatherDivString += temperature;
 			weatherDivString += "<br>";
 
-			$("#weather-info").html(weatherDivString);
+			$("#weather").html(weatherDivString);
 		}
 	});
 };
