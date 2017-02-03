@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="css/overall.css">
 	<link rel="stylesheet" href="css/weather.css">
 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script> <!-- This imports JQuery -->
+	<script src="js/help.js"></script>
 	<script src="js/weather.js"></script>
 </head>
 
@@ -27,7 +28,7 @@
 
 	<br>
 		
-	<form id="search">
+	<form id="citySearch">
 		Enter a City: <input id="cityField" type="text" value="" onkeyup="WeatherOnCityInput()">
 		<input id="weatherButton" type="submit" value="Find weather info">
 		<br>
@@ -41,13 +42,27 @@
 
 	<div id="weather"></div>
 
+	<br>
+
+	<form id="soSearch">
+		Search Term: <input id="helpfield" type="text">
+		<input type="submit" value="Search Stack Overflow">
+		<br>
+	</form>
+
+	<div id="results"></div>
+
 </div>
 
 <!-- http://stackoverflow.com/questions/1263852/prevent-form-redirect-or-refresh-on-submit -->
 <!-- Submit function for search box -->
 <script type="text/javascript">
-	$("#search").submit(function () {
+	$("#citySearch").submit(function () {
 		WeatherOnClickSubmit();
+	 	return false;
+	});
+	$( "#soSearch" ).submit(function () {
+		OnClickSubmit();
 	 	return false;
 	});
 </script>
